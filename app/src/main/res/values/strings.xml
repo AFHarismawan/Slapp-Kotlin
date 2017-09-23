@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Slapp</string>
     <string name="mulai">Mulai</string>
+    <string name="retry">RETRY</string>
+    <string name="no_internet">No internet connection!</string>
+    <string name="failed_get_data">Failed to get data!</string>
 </resources>
