@@ -1,14 +1,14 @@
-package com.harismawan.slapp
+package com.harismawan.slapp.ui
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+
+import com.harismawan.slapp.R
 
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-
     }
 }

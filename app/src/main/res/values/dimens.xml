@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="default_margin">16dp</dimen>
+    <dimen name="card_corner_radius">7dp</dimen>
+    
+    <dimen name="dimen_8dp">8dp</dimen>
+    <dimen name="dimen_16dp">16dp</dimen>
+    <dimen name="logo_size">150dp</dimen>
+    <dimen name="splash_text_size">56sp</dimen>
+</resources>

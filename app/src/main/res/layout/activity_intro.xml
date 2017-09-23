@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.harismawan.slapp.ui.IntroActivity">
+    
+    <android.support.v4.view.ViewPager
+            android:id="@+id/vpIntro"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+    </android.support.v4.view.ViewPager>
+    
+    <!--<View-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="@dimen/viewHeight"-->
+    <!--android:layout_above="@+id/tab_dots"-->
+    <!--android:alpha="0.4"-->
+    <!--android:background="@android:color/white"/>-->
+    
+    <android.support.design.widget.TabLayout
+            android:id="@+id/tabDots"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/dimen_16dp"
+            android:layout_marginTop="@dimen/dimen_16dp"
+            app:tabBackground="@drawable/tab_indicator"
+            app:tabGravity="center"
+            app:tabIndicatorHeight="0dp"/>
+    
+    
+    <Button
+            android:id="@+id/btnGetStarted"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="@dimen/dimen_16dp"
+            android:background="@android:color/white"
+            android:text="@string/mulai"
+            android:textColor="@color/colorPrimary"
+            android:visibility="invisible"/>
+
+</RelativeLayout>
