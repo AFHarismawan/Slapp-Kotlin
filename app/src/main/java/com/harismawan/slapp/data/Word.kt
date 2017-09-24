@@ -21,9 +21,17 @@ class Word : AbstractFlexibleItem<Word.WordViewHolder>() {
     @Expose
     var name: String? = null
 
-    @SerializedName("link")
+    @SerializedName("videoUrl")
     @Expose
     var link: String? = null
+
+    @SerializedName("kategori")
+    @Expose
+    var category: String? = null
+
+    @SerializedName("deskripsi")
+    @Expose
+    var desc: String? = null
 
     override fun equals(other: Any?): Boolean = false
 
@@ -36,10 +44,29 @@ class Word : AbstractFlexibleItem<Word.WordViewHolder>() {
                                 position: Int, payloads: MutableList<Any?>?) {
         val v = holder?.itemView
         Glide.with(v?.context)
-                .load("""https://img.youtube.com/vi/$link/0.jpg""")
+                .load("https://img.youtube.com/vi/$link/0.jpg")
                 .fitCenter()
                 .into(v?.videoThumbnail)
-        v?.word?.text = name?.toUpperCase()
+
+        val d = v?.desc
+        if (d?.lineCount == 1) d.visibility = View.GONE
+
+
+        val b = v?.btnHide
+        b?.setOnClickListener({
+            if (d?.maxLines == 1) {
+                b.animate().rotation(180f).start()
+
+                d.maxLines = d.lineCount
+            } else {
+                b.animate().rotation(0f).start()
+                d?.maxLines = 1
+            }
+        })
+
+        val into = "$name ($category)"
+        v?.word?.text = into
+        d?.text = desc
     }
 
     class WordViewHolder(view: View?, adapter: FlexibleAdapter<out IFlexible<*>>?) : FlexibleViewHolder(view, adapter)

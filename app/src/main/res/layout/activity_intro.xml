@@ -22,9 +22,9 @@
         android:id="@+id/tabDots"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="@dimen/dimen_16dp"
+        android:layout_marginBottom="@dimen/dimen_70dp"
         android:layout_marginTop="@dimen/dimen_16dp"
+        android:layout_alignParentBottom="true"
         app:tabBackground="@drawable/tab_indicator"
         app:tabGravity="center"
         app:tabIndicatorHeight="0dp" />
@@ -32,15 +32,13 @@
 
     <Button
         android:id="@+id/btnGetStarted"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:layout_centerHorizontal="true"
         android:layout_margin="@dimen/dimen_16dp"
-        android:background="@color/white"
+        android:background="@drawable/rounded_background"
         android:text="@string/mulai"
-        android:textColor="@color/colorPrimary"
+        android:textColor="@color/white"
         android:visibility="invisible" />
 
 </RelativeLayout>

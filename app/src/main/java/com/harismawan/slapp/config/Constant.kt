@@ -6,5 +6,7 @@ class Constant {
 
     companion object {
         val baseUrl = BuildConfig.baseUrl
+        val apiKey = BuildConfig.apiKey
+        val extraLink = "link"
     }
 }

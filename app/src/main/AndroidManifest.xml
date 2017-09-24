@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.harismawan.slapp">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:name=".App"
@@ -20,11 +20,12 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ui.IntroActivity"
-            android:theme="@style/AppTheme">
+            android:name=".ui.IntroActivity">
         </activity>
-        <activity android:name=".ui.MainActivity"
-            android:theme="@style/AppTheme">
+        <activity
+            android:name=".ui.MainActivity">
+        </activity>
+        <activity android:name=".ui.VideoActivity">
         </activity>
     </application>
 

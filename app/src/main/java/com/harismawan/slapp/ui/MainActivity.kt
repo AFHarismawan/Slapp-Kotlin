@@ -10,6 +10,7 @@ import android.view.View
 import android.widget.TextView
 
 import com.harismawan.slapp.R
+import com.harismawan.slapp.config.Constant
 import com.harismawan.slapp.data.Word
 import com.harismawan.slapp.util.Utils
 import eu.davidea.flexibleadapter.FlexibleAdapter
@@ -36,9 +37,9 @@ class MainActivity : AppCompatActivity() {
     private fun initAdapter() {
         val adapter = FlexibleAdapter<Word>(words)
         adapter.addListener(FlexibleAdapter.OnItemClickListener { position ->
-//            val change = Intent(this@MainActivity, ListDetailActivity::class.java)
-//            change.putExtra(Constants.EXTRA_KEY_ID, recipes.get(position).id)
-//            startActivity(change)
+            val change = Intent(this, VideoActivity::class.java)
+            change.putExtra(Constant.extraLink, words[position].link)
+            startActivity(change)
             false
         })
         recyclerWord.adapter = adapter
@@ -50,7 +51,7 @@ class MainActivity : AppCompatActivity() {
             override fun onResponse(call: Call<List<Word>>, response: Response<List<Word>>) {
                 if (response.isSuccessful) {
                     words.clear()
-                    words.addAll(response.body())
+                    words.addAll(response.body()!!)
                     initAdapter()
                     progressBar.visibility = View.GONE
                 } else {

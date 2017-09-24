@@ -38,7 +38,7 @@ class IntroActivity : AppCompatActivity(), ViewPager.OnPageChangeListener {
     }
 
     override fun onPageSelected(position: Int) {
-        if (position == 3) {
+        if (position == 2) {
             btnGetStarted.visibility = View.VISIBLE
             btnGetStarted.setOnClickListener({
                 val intent = Intent(this, MainActivity::class.java)
@@ -57,8 +57,8 @@ class IntroActivity : AppCompatActivity(), ViewPager.OnPageChangeListener {
     enum class Content constructor(val text: String, val color: Int) {
         ONE("1", Color.CYAN),
         TWO("2", Color.MAGENTA),
-        THREE("3", Color.YELLOW),
-        FOUR("4", Color.BLUE)
+        THREE("3", Color.YELLOW)
+
     }
 
     private class ViewPagerAdapter(fm: FragmentManager) : FragmentPagerAdapter(fm) {

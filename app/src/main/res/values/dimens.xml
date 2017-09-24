@@ -4,7 +4,14 @@
     <dimen name="card_corner_radius">2dp</dimen>
 
     <dimen name="dimen_8dp">8dp</dimen>
+    <dimen name="dimen_10dp">10dp</dimen>
     <dimen name="dimen_16dp">16dp</dimen>
     <dimen name="logo_size">150dp</dimen>
+
     <dimen name="splash_text_size">56sp</dimen>
+    <dimen name="text_size_medium">16sp</dimen>
+    <dimen name="text_size_small">14sp</dimen>
+    <dimen name="dimen_75dp">75dp</dimen>
+    <dimen name="video_thumbnail_height">200dp</dimen>
+    <dimen name="dimen_70dp">70dp</dimen>
 </resources>
