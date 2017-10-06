@@ -8,6 +8,7 @@ import android.support.design.widget.Snackbar
 import android.support.v7.widget.LinearLayoutManager
 import android.view.View
 import android.widget.TextView
+import com.arlib.floatingsearchview.FloatingSearchView
 
 import com.harismawan.slapp.R
 import com.harismawan.slapp.config.Constant
@@ -20,9 +21,10 @@ import retrofit2.Callback
 import retrofit2.Response
 import java.util.ArrayList
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), FloatingSearchView.OnQueryChangeListener {
 
     var words = ArrayList<Word>()
+    private var adapter = FlexibleAdapter<Word>(words)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,12 +32,15 @@ class MainActivity : AppCompatActivity() {
 
         val linearLayoutManager = LinearLayoutManager(this)
         recyclerWord.layoutManager = linearLayoutManager
+        floatingSearchView.setOnQueryChangeListener(this)
 
+        //TODO add SwipeRefreshLayout
+        //TODO save list current position and current search on state change
         loadData()
     }
 
     private fun initAdapter() {
-        val adapter = FlexibleAdapter<Word>(words)
+        adapter = FlexibleAdapter(words)
         adapter.addListener(FlexibleAdapter.OnItemClickListener { position ->
             val change = Intent(this, VideoActivity::class.java)
             change.putExtra(Constant.extraLink, words[position].link)
@@ -43,6 +48,17 @@ class MainActivity : AppCompatActivity() {
             false
         })
         recyclerWord.adapter = adapter
+    }
+
+    override fun onSearchTextChanged(oldQuery: String?, newQuery: String?) {
+        executeSearch(newQuery)
+    }
+
+    private fun executeSearch(query: String?) {
+        if (adapter.hasNewSearchText(query)) {
+            adapter.searchText = query
+            adapter.filterItems()
+        }
     }
 
     private fun loadData() {

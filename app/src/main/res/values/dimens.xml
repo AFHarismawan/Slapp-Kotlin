@@ -11,7 +11,7 @@
     <dimen name="splash_text_size">56sp</dimen>
     <dimen name="text_size_medium">16sp</dimen>
     <dimen name="text_size_small">14sp</dimen>
-    <dimen name="dimen_75dp">75dp</dimen>
     <dimen name="video_thumbnail_height">200dp</dimen>
     <dimen name="dimen_70dp">70dp</dimen>
+    <dimen name="dimen_55dp">55dp</dimen>
 </resources>

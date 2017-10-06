@@ -10,7 +10,7 @@ static def getSecuredString(String property) {
 
 android {
     compileSdkVersion 26
-    buildToolsVersion "26.0.1"
+    buildToolsVersion "26.0.2"
     defaultConfig {
         applicationId "com.harismawan.slapp"
         minSdkVersion 19
@@ -41,15 +41,16 @@ dependencies {
     })
     testCompile 'junit:junit:4.12'
 
-    compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
-    compile 'com.android.support:appcompat-v7:26.1.0'
-    compile 'com.android.support:recyclerview-v7:26.1.0'
-    compile 'com.android.support:cardview-v7:26.1.0'
-    compile 'com.android.support:design:26.1.0'
-    compile 'com.squareup.retrofit2:retrofit:2.3.0'
-    compile 'com.squareup.retrofit2:converter-gson:2.3.0'
-    compile 'eu.davidea:flexible-adapter:5.0.0-rc2'
-    compile 'eu.davidea:flexible-adapter-databinding:1.0.0-b1@aar'
-    compile 'com.github.bumptech.glide:glide:3.7.0'
-    compile 'com.github.arimorty:floatingsearchview:2.1.1'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.android.support:recyclerview-v7:26.1.0'
+    implementation 'com.android.support:cardview-v7:26.1.0'
+    implementation 'com.android.support:design:26.1.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.3.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
+    implementation 'eu.davidea:flexible-adapter:5.0.0-rc2'
+    implementation 'eu.davidea:flexible-adapter-databinding:1.0.0-b1@aar'
+    implementation 'com.github.bumptech.glide:glide:3.7.0'
+    implementation 'com.github.arimorty:floatingsearchview:2.1.1'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.0.1'
 }

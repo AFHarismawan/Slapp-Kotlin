@@ -12,9 +12,6 @@
         android:id="@+id/floatingSearchView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:floatingSearch_searchBarMarginLeft="@dimen/default_margin"
-        app:floatingSearch_searchBarMarginTop="@dimen/default_margin"
-        app:floatingSearch_searchBarMarginRight="@dimen/default_margin"
         app:floatingSearch_searchHint="@string/search"
         app:floatingSearch_suggestionsListAnimDuration="250"
         app:floatingSearch_showSearchKey="false"
@@ -27,7 +24,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:clipToPadding="false"
-        android:layout_marginTop="@dimen/dimen_75dp"
+        android:layout_marginTop="@dimen/dimen_55dp"
         android:paddingTop="@dimen/dimen_8dp"
         android:paddingBottom="@dimen/dimen_8dp"
         android:scrollbars="vertical" />
